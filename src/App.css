@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+/* Add this CSS to your project's stylesheet */
+.hexagon {
+  width: 200px;
+  height: 115px;
+  background-color: transparent; /* Use a transparent background if using an image */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+  
+}
+
+.hexagon img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.2); /* Adjust as needed to fill the hexagon shape */
+}

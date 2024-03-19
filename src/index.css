@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';np
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,52 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* styles.css */
+.hex {
+  margin-top: 30px;
+  width: 200px; /* Set your desired width */
+  height: 280px; /* Set your desired height */
+  background-color: #27aae1;
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Ensures that parts of the image outside the hexagon shape are not shown */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagonal shape */
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the hex area without being stretched */
+  object-position: center; /* Centers the image within the hexagon shape */
+  clip-path: inherit; /* Applies the same clipping to the image as the .hex container */
+}
+.flex.h-screen {
+  display: flex;
+  height: 100vh; /* Use 100vh to take up full viewport height */
+}
+
+
+.w-1/2{
+  width: 50%;
+}
+
+/* Ensure the hexagon container div has no unwanted overflow */
+.hex-container {
+  overflow: hidden; /* or 'auto' if you want scrolling */
+  width: 100%;
+  overflow-y: auto;
+  height: 100%; /* This should be 50vh or 100%, depending on how you want to display it */
+}
+.hexagon-grid {
+  position: relative;
+  width: fit-content; /* Adjust the width as needed */
+}
+.hex {
+  position: absolute;
+  /* rest of your styles */
+}
+.rightDiv {
+  overflow: hidden;
+  position: relative;
 }
