@@ -1,6 +1,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';np
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -63,3 +65,43 @@ code {
   position: relative;
 }
 
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7)); /* Adjust the value based on the number of product cards and their width */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.item-name {
+  color: black;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; /* Specify the font-family if needed */
+  font-size: 18px; /* Specify the font-size if needed */
+  /* Add other font styling as needed */
+}
+
+.button-save-hover:hover {
+  background-color: #BBB49B;
+}
+
+.button-cancel-hover:hover {
+  background-color: #000; /* Black color for hover state */
+}
